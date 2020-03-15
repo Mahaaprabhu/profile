@@ -1,0 +1,181 @@
+@import '../../styles/global-vars.style.scss';
+
+@mixin bg-gradient-dark {
+    background-image: linear-gradient(to right, $bg-color-primary, $bg-color-secondary, $bg-color-tertiary)
+}
+
+.header {
+    
+    @include bg-gradient-dark();
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 75% 75%, 74% 90%, 50% 75%, 0% 75%);
+    display: grid;
+    width: 90vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 5% 2rem 40vh 2rem;
+    line-height: 1.5;
+    font-family: cursive;
+    text-align: center;
+    grid-template-rows: 2fr 1fr;
+    margin: 5% auto;
+
+    @include responsiveness('mob', 'portrait') {
+        border: 2px solid red;
+        grid-template-columns: 1fr;
+        
+    }
+
+    @include responsiveness('mob', 'landscape') {
+        border: 2px solid salmon;
+        grid-template-columns: 1fr;
+    }
+
+    @include responsiveness('tab', 'portrait') {
+        border: 2px solid blue;
+        grid-template-columns: 1fr;
+    }
+
+    @include responsiveness('tab', 'landscape') {
+        border: 2px solid slateblue;
+        grid-template-columns: 1fr;
+    }
+
+    @include responsiveness('desk', 'portrait') {
+        grid-template-columns: 1fr;
+        border: 2px solid lightgreen;
+    }
+
+    @include responsiveness('desk', 'landscape') {
+        grid-template-columns: 1fr;
+        border: 2px solid seagreen;
+    }
+
+    &__image-sec {
+        display: flex;
+        width: 100%;
+        border: 1px solid red;
+
+        .image {
+            margin: auto;
+            border: 1px dashed red;
+            max-width: 12rem;
+
+            @include responsiveness('mob', 'portrait') {
+                max-width: 10rem;
+            }
+        
+            @include responsiveness('mob', 'landscape') {
+                max-width: 10rem;
+            }
+        
+            @include responsiveness('tab', 'portrait') {
+                min-width: 10rem;
+                max-width: 12rem;
+            }
+        
+            @include responsiveness('tab', 'landscape') {
+                min-width: 12rem;
+                max-width: 13rem;
+            }
+        
+            @include responsiveness('desk', 'portrait') {
+                min-width: 12rem;
+                max-width: 13rem;
+            }
+        
+            @include responsiveness('desk', 'landscape') {
+                min-width: 12rem;
+                max-width: 13rem;
+            }
+
+            img {
+                width: 100%;
+                padding: 1rem;
+                border-radius: 1000px;
+                box-shadow: 1px 1px 1rem black;
+            }
+        }
+    }
+
+    &__text-sec {
+        display: flex;
+        border: 1px solid green;
+        width: 100%;
+
+        &__text {
+            margin: auto;
+            width: 90%;
+            border: 1px dashed green;
+
+            &__greet {
+                font-size: .6rem;
+            }
+
+            &__intro {
+                font-size: 1rem;
+                transform: skew(0, -3deg);
+                line-height: 2;
+            }
+
+            @include responsiveness('mob', 'portrait') {
+                &__greet {
+                    font-size: .6rem;
+                }
+    
+                &__intro {
+                    font-size: 1rem;
+                }
+            }
+        
+            @include responsiveness('mob', 'landscape') {
+                &__greet {
+                    font-size: .7rem;
+                }
+    
+                &__intro {
+                    font-size: 1.1rem;
+                }
+            }
+        
+            @include responsiveness('tab', 'portrait') {
+                &__greet {
+                    font-size: .8rem;
+                }
+    
+                &__intro {
+                    font-size: 1.2rem;
+                }
+            }
+        
+            @include responsiveness('tab', 'landscape') {
+                &__greet {
+                    font-size: .9rem;
+                }
+    
+                &__intro {
+                    font-size: 1.3rem;
+                }
+            }
+        
+            @include responsiveness('desk', 'portrait') {
+                &__greet {
+                    font-size: 1.5rem;
+                }
+    
+                &__intro {
+                    font-size: 2rem;
+                }
+            }
+        
+            @include responsiveness('desk', 'landscape') {
+                &__greet {
+                    font-size: 1.6rem;
+                }
+    
+                &__intro {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+}

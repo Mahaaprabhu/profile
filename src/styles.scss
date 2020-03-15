@@ -1,0 +1,19 @@
+//import global variables
+@import 'app/styles/global-vars.style.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+html {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    color: $color-primary;
+    font-size: 62.5%;
+}
