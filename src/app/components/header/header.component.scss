@@ -53,11 +53,9 @@
     &__image-sec {
         display: flex;
         width: 100%;
-        border: 1px solid red;
 
         .image {
             margin: auto;
-            border: 1px dashed red;
             max-width: 12rem;
 
             @include responsiveness('mob', 'portrait') {
@@ -99,13 +97,11 @@
 
     &__text-sec {
         display: flex;
-        border: 1px solid green;
         width: 100%;
 
         &__text {
             margin: auto;
             width: 90%;
-            border: 1px dashed green;
 
             &__greet {
                 font-size: .6rem;
