@@ -101,16 +101,29 @@
 
         &__text {
             margin: auto;
-            width: 90%;
 
             &__greet {
+                font-weight: 500;
                 font-size: .6rem;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+                opacity: 0;
+                animation: type-mid 3s steps(40, end);
+                animation-fill-mode: forwards;
             }
 
             &__intro {
                 font-size: 1rem;
+                font-weight: 800;
                 transform: skew(0, -3deg);
                 line-height: 2;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+                opacity: 0;
+                animation: type-end 4s steps(40, end) 3s;
+                animation-fill-mode: forwards;
             }
 
             @include responsiveness('mob', 'portrait') {
@@ -174,4 +187,17 @@
             }
         }
     }
+}
+
+@keyframes type-mid {
+  0% {width: 0;}
+  1% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+
+@keyframes type-end {
+  0% {width: 0;}
+  1% {opacity: 1;}
+  100% {opacity: 1;}
 }
