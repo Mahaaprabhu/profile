@@ -1,7 +1,7 @@
 @import '../../styles/global-vars.style.scss';
 
 @mixin bg-gradient-dark {
-    background-image: linear-gradient(to right, $bg-color-primary, $bg-color-secondary, $bg-color-primary)
+    background-image: linear-gradient(98deg, darkslategray, ghostwhite);
 }
 
 @mixin shadow-10z {
@@ -51,13 +51,13 @@
                 animation: type-mid 3s steps(40, end);
                 animation-fill-mode: forwards;
             }
-            text-shadow: 1px 1px 2px darkslategray;
+            text-shadow: 1px 1px 1px skyblue;
         }
 
         &__intro {
             margin: auto;
             font-size: 1.6rem;
-            font-weight: 800;
+            font-weight: 700;
             transform: skew(0, -3deg);
             line-height: 2;
             white-space: nowrap;
@@ -68,7 +68,7 @@
                 animation: type-end 3s steps(40, end) 2s;
                 animation-fill-mode: forwards;
             }
-            text-shadow: 1px 1px 2px darkslategray;
+            text-shadow: 1px 1px 1px skyblue;
         }
         
     }
@@ -181,6 +181,3 @@
     70% {box-shadow:  1px 1px 12px darkslategray;}
     100% {box-shadow:  1px 1px 10px darkslategray;}
 }
-
-
-
