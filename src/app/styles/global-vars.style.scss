@@ -1,5 +1,5 @@
-$bg-color-primary: #401f69;
-$bg-color-secondary: #9c84bb;
+$bg-color-primary: darkslategray;
+$bg-color-secondary: honeydew;
 $bg-color-tertiary: #583782;
 
 $color-primary: black;
@@ -8,73 +8,76 @@ $color-tertiary: rgb(151, 202, 209);
 
 $padding-extra-large: 2rem;
 
-@mixin responsiveness($display-type, $orientation) {
+@mixin responsiveness($display-type) {
     /*
         For 16px default font size:
-            400px => 25em
-            500px => 31.25em
-            600px => 37.5em
-            900px => 56.23em
+            <0300px => mob-small => 18.750em
+            <0450px => mob-port  => 28.125em
+            <0600px => mob-land  => 37.500em
+            <0750px => tab-port  => 46.875em
+            <1000px => tab-land  => 62.500em
+            <1250px => laptop    => 78.125em
+            >1250px => bigscreen => 78.125em
+
+        Override Order:
+            @include responsiveness('mob-small') {}
+            @include responsiveness('mob-port') {}
+            @include responsiveness('mob-land') {}
+            @include responsiveness('tab-port') {}
+            @include responsiveness('tab-land') {}
+            @include responsiveness('laptop') {}
+            @include responsiveness('bigscreen') {}
+            
+
     */
 
-    @if ($display-type == 'mob') {
-        @if ($orientation == 'portrait') {
-            @media (min-height: 25em) and (max-width: 37.5em) {
-                @content;
-            }
-        }
-        @if ($orientation == 'landscape') {
-            @media (max-height: 25em) and (max-width: 37.5em) {
-                @content;
-            }
-        }
-    }
-    
-    @if ($display-type == 'tab') {
-        @if ($orientation == 'portrait') {
-            @media (min-height: 31.25em) and (min-width:37.5em) and (max-width: 56.23em) {
-                @content;
-            }
-        }
-        @if ($orientation == 'landscape') {
-            @media (max-height: 31.25em) and (min-width:37.5em) and (max-width: 56.23em) {
-                @content;
-            }
+    //1. Mobile Small Screens ( 300px => 18.75em )
+    @if ($display-type == 'mob-small') {
+        @media (max-width: 18.75em) {
+            @content;
         }
     }
 
-    @if ($display-type == 'desk') {
-        @if ($orientation == 'portrait') {
-            @media (min-height: 37.5em) and (min-width: 56.23em) {
-                @content;
-            }
-        }
-        @if ($orientation == 'landscape') {
-            @media (max-height: 37.5em) and (min-width: 56.23em) {
-                @content;
-            }
+    //2. Mobile Portrait ( 300px => 18.75em )
+    @if ($display-type == 'mob-port') {
+        @media (min-width: 18.75em) {
+            @content;
         }
     }
 
+    //3. Mobile Landscape ( 450px => 28.125em )
+    @if ($display-type == 'mob-land') {
+        @media (min-width: 28.125em) {
+            @content;
+        }
+    }
+
+    //4. Tablet Portrait ( 600px => 37.5em )
+    @if ($display-type == 'tab-port') {
+        @media (min-width: 37.5em) {
+            @content;
+        }
+    }
+
+    //5. Tablet Landscape ( 750px => 46.875em )
+    @if ($display-type == 'tab-land') {
+        @media (min-width: 46.875em) {
+            @content;
+        }
+    }
+
+    //6. Laptop ( 1000px  => 62.5em )
+    @if ($display-type == 'laptop') {
+        @media (min-width: 62.5em) {
+            @content;
+        }
+    }
+
+    //7. Bigscreen ( 1250px => 78.125em )
+    @if ($display-type == 'bigscreen') {
+        @media (min-width: 78.125em) {
+            @content;
+        }
+    }
+   
 }
-
-/*
-    @include responsiveness('mob', 'portrait') {
-    }
-
-    @include responsiveness('mob', 'landscape') {
-    }
-
-    @include responsiveness('tab', 'portrait') {
-    }
-
-    @include responsiveness('tab', 'landscape') {
-    }
-
-    @include responsiveness('desk', 'portrait') {
-    }
-
-    @include responsiveness('desk', 'landscape') {
-    }
-
-*/

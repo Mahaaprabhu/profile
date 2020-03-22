@@ -11,9 +11,29 @@
 html {
     width: 100%;
     min-height: 100vh;
+    font-size: 62.5%;
 }
 
 body {
     color: $color-primary;
-    font-size: 62.5%;
+    
+    @include responsiveness('mob-small') {
+        border: 1px solid yellow;
+    }
+    @include responsiveness('mob-land') {
+        border: 1px solid red;
+    }
+    @include responsiveness('tab-port') {
+        border: 1px solid blueviolet;
+    }
+    @include responsiveness('tab-land') {
+        border: 1px solid blue;
+    }
+    @include responsiveness('laptop') {
+        border: 1px solid lightgreen;
+    }
+    @include responsiveness('bigscreen') {
+        border: 1px solid green;
+    }
+    
 }
