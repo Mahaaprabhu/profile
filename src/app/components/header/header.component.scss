@@ -1,11 +1,7 @@
 @import '../../styles/global-vars.style.scss';
 
-@mixin bg-gradient-dark {
-    background-image: linear-gradient(98deg, darkslategray, ghostwhite);
-}
-
 @mixin shadow-10z {
-    box-shadow: 1px 1px 10px darkslategray;
+    box-shadow: 1px 1px 10px black;
 }
 
 
@@ -15,7 +11,6 @@
     padding: 1rem 2rem;
 
     .profile-image {
-
         width: 35vw;
         max-width: 25rem;
         height: 35vw;
@@ -23,6 +18,7 @@
         margin: 1rem auto;
 
         img {
+            @include bg-gradient-glossy();
             width: 100%;
             padding: 1rem;
             border-radius: 100vw;
@@ -36,7 +32,8 @@
         font-family: cursive;
         text-align: center;
         margin-bottom: 2rem;
-        color: rgb(43, 39, 39);
+        color: $color-primary;
+        text-shadow: $text-shadow-primary;
 
         &__greet {
             margin: auto;
@@ -51,13 +48,12 @@
                 animation: type-mid 3s steps(40, end);
                 animation-fill-mode: forwards;
             }
-            text-shadow: 1px 1px 1px skyblue;
         }
 
         &__intro {
             margin: auto;
             font-size: 1.6rem;
-            font-weight: 700;
+            font-weight: 600;
             transform: skew(0, -3deg);
             line-height: 2;
             white-space: nowrap;
@@ -68,7 +64,6 @@
                 animation: type-end 3s steps(40, end) 2s;
                 animation-fill-mode: forwards;
             }
-            text-shadow: 1px 1px 1px skyblue;
         }
         
     }

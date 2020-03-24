@@ -1,1 +1,9 @@
-<p>skills works!</p>
+<div class="skill-set">
+    <h3 class="skill-set__category">{{skillSet.skillCategory}}</h3>
+    <div class="skill" *ngFor = "let skill of skillSet.skills">
+        <div class="skill__name">{{skill.name}}</div>
+        <div class="skill__level">
+            <div class="skillbar" [style.width.%]="skill.level"></div>
+        </div>
+    </div>
+</div>

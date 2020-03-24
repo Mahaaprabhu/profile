@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -7,7 +7,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  @Input() input = 'default input';
+
+  skillSet: {
+    skillCategory: string;
+    skills: {
+      name: string;
+      level: number;
+    }[];
+  }
+
+  constructor() {
+    this.skillSet = {
+      skillCategory: 'Front End',
+      skills: [
+        {
+          name: 'Angular',
+          level: 77
+        },
+        {
+          name: 'Javascript',
+          level: 82
+        },
+        {
+          name: 'Typescript',
+          level: 85
+        },
+        {
+          name: 'HTML5',
+          level: 91
+        },
+        {
+          name: 'CSS3',
+          level: 85
+        }
+      ]
+    }
+  }
 
   ngOnInit(): void {
   }
