@@ -12,11 +12,11 @@ $text-shadow-secondary: 0px 0px 20px dimgrey;
 $padding-extra-large: 2rem;
 
 @mixin bg-gradient-dark {
-    background-image: linear-gradient(98deg, $bg-color-primary, $bg-color-secondary);
+    background-image: linear-gradient(180deg, #000000, transparent);
 }
 
 @mixin bg-gradient-light {
-    background-image: linear-gradient(to right, lightcyan, darkgray);
+    background-image: linear-gradient(to right, grey, darkkhaki, grey);
 }
 
 @mixin bg-gradient-glossy {
