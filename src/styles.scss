@@ -42,22 +42,20 @@ body {
     font-family: serif;
     font-size: 1.5rem;
     font-weight: 900;
-    color: cadetblue;
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
-    text-shadow: .1rem .1rem 5px black;
+    text-shadow: $text-shadow-secondary;
 }
 
 .heading-secondary {
     font-family: serif;
     font-size: 1.5rem;
     font-weight: 800;
-    color: cadetblue;
     margin-top: .5rem;
     margin-bottom: .5rem;
-    text-shadow: .1rem .1rem 1rem black;
+    text-shadow: $text-shadow-secondary;
 }
 
 .heading-tertiary {
@@ -72,8 +70,7 @@ body {
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: .25rem;
-    color: lightgray;
-    text-shadow: 1rem 1rem 2rem black;
+    text-shadow: $text-shadow-secondary;
     margin-bottom: 1rem;
 
     li {

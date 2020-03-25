@@ -2,11 +2,12 @@ $bg-color-primary: black;
 $bg-color-secondary: #3a3535;
 $bg-color-tertiary: rgb(102, 101, 101);
 
-$color-primary: teal;
+$color-primary: black;
 $color-secondary: rgb(60, 166, 170);
 $color-tertiary: rgb(151, 202, 209);
 
 $text-shadow-primary: 1px 1px 5px black;
+$text-shadow-secondary: 0px 0px 20px dimgrey;
 
 $padding-extra-large: 2rem;
 
@@ -15,11 +16,11 @@ $padding-extra-large: 2rem;
 }
 
 @mixin bg-gradient-light {
-    background-image: linear-gradient(to right, teal, rgb(51, 47, 47));
+    background-image: linear-gradient(to right, lightcyan, darkgray);
 }
 
 @mixin bg-gradient-glossy {
-    background-image: linear-gradient(150deg, black, rgb(7, 78, 78));
+    background-image: linear-gradient(150deg, black, lightcyan);
 }
 
 @mixin responsiveness($display-type) {

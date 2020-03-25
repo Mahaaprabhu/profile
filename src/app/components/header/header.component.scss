@@ -32,8 +32,7 @@
         font-family: cursive;
         text-align: center;
         margin-bottom: 2rem;
-        color: $color-primary;
-        text-shadow: $text-shadow-primary;
+        color: lightcyan;
 
         &__greet {
             margin: auto;
@@ -166,13 +165,14 @@
 }
 
 @keyframes shadow_10z_animation {
-    0% {box-shadow: 0px 0px 0px darkslategray; opacity: 0;}
-    9% {box-shadow: 0px 0px 0px darkslategray; opacity: .2;}
-    10% {box-shadow:  0px 0px 0px darkslategray; opacity: .3;}
+    0% {box-shadow: 0px 0px 0px darkslategray; opacity: 0;text-shadow: 0px 0px 5px darkgrey;}
+    9% {box-shadow: 0px 0px 0px darkslategray; opacity: .2;text-shadow: 0px 0px 5px darkgrey;}
+    10% {box-shadow:  0px 0px 0px darkslategray; opacity: .3;text-shadow: 0px 0px 5px darkgrey;}
     50% {
         box-shadow:  1px 1px 5px darkslategray; 
         opacity: .6;
+        text-shadow: 0px 0px 5px darkgrey;
     }
-    70% {box-shadow:  1px 1px 12px darkslategray;}
-    100% {box-shadow:  1px 1px 10px darkslategray;}
+    70% {box-shadow:  1px 1px 12px darkslategray;text-shadow: 0px 0px 5px darkgrey;}
+    100% {box-shadow:  1px 1px 10px darkslategray;text-shadow: 0px 0px 5px darkgrey;}
 }
