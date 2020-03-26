@@ -15,7 +15,7 @@ html {
 
 body {
     color: $color-primary;
-    @include bg-gradient-light;
+    background-image: linear-gradient(to right, grey, #cff0ff, grey);
     
     @include responsiveness('mob-small') {
         border: .1rem solid yellow;
