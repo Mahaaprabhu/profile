@@ -1,17 +1,23 @@
+//import global variables
+@import '../../styles/global-vars.style.scss';
+
 .skill-set {
-    min-height: 25rem;
+    min-height: 0;
     margin: auto;
-    background-image: linear-gradient(to right, #5f8192, #c7e4f1);
-    color: black;
+    background-image: linear-gradient(45deg, #b3c9d2, transparent);
     padding: 1rem 2rem;
 
+    @include responsiveness('mob-land') {
+        min-height: 30rem;
+    }
+
     &__category {
-        margin: 1rem auto;
+        margin: 1rem auto 3rem auto;
         width: 60%;
         text-align: center;
         font-size: 1.5rem;
         letter-spacing: .3rem;
-        border-bottom: 2px solid grey;
+        border-bottom: 2px solid #60676a;
     }
 
     .skill {
@@ -20,7 +26,7 @@
         display: flex;
 
         &__name {
-            width: 50%;
+            width: 60%;
         }
 
         &__level {

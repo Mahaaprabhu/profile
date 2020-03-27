@@ -16,13 +16,13 @@
         height: 35vw;
         max-height: 25rem;
         margin: 1rem auto;
+        animation: shadow_10z_animation linear 2s;
 
         img {
             background-image: linear-gradient(120deg, black, #cdedfb, black);
             width: 100%;
             padding: 1rem;
             border-radius: 100vw;
-            animation: shadow_10z_animation linear 2s;
         }
     }
 
@@ -32,6 +32,7 @@
         text-align: center;
         margin-bottom: 2rem;
         text-shadow: 0px 0px 10px dimgrey;
+        transform-origin: right;
 
         &__greet {
             margin: auto;
@@ -43,7 +44,7 @@
             width: 100%;
             @supports (animation: type-mid 3s steps(40, end)) {
                 opacity: 0;
-                animation: type-mid 3s steps(40, end);
+                animation: type-mid 3s steps(40, end) 2s;
                 animation-fill-mode: forwards;
             }
         }
@@ -57,9 +58,9 @@
             white-space: nowrap;
             overflow: hidden;
             width: 100%;
-            @supports (animation: type-end 3s steps(40, end) 2s) {
+            @supports (animation: type-end 3s steps(40, end) 3.5s) {
                 opacity: 0;
-                animation: type-end 3s steps(40, end) 2s;
+                animation: type-end 3s steps(40, end) 3.5s;
                 animation-fill-mode: forwards;
             }
         }
@@ -164,6 +165,12 @@
 }
 
 @keyframes shadow_10z_animation {
+    0% {width: 0rem; height: 0rem}
+    10% {width: 10rem; height: 10rem}
+    0% {width: 0rem; height: 0rem}
+}
+
+@keyframes shadow_10z_animation_bkp {
     0% {box-shadow: 0px 0px 0px darkslategray; opacity: 0;text-shadow: 0px 0px 5px darkgrey;}
     9% {box-shadow: 0px 0px 0px darkslategray; opacity: .2;text-shadow: 0px 0px 5px darkgrey;}
     10% {box-shadow:  0px 0px 0px darkslategray; opacity: .3;text-shadow: 0px 0px 5px darkgrey;}

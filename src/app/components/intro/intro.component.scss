@@ -1,10 +1,25 @@
 @import '../../styles/global-vars.style.scss';
 
 .intro {
-    padding: 1rem 3rem;
-    width: 95%;
-    margin: 3rem auto;
+    margin: 10vh auto 5rem;
     border-radius: .5rem;
     word-spacing: .2rem;
 }
 
+.contact-type {
+    display: inline-block;
+    font-weight: 600;
+    width: 6.5rem;
+}
+
+.contact-value {
+    display: inline-block;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

@@ -14,44 +14,46 @@ export class SkillsetsComponent implements OnInit {
     this.skillSets = [{
       skillCategory: 'Front End',
       skills: [
-        { name: 'Angular', level: 77 },
+        { name: 'Angular 2+', level: 77 },
         { name: 'Javascript', level: 82 },
         { name: 'Typescript', level: 85 },
         { name: 'HTML5', level: 91 },
-        { name: 'CSS3', level: 85 }
+        { name: 'CSS3', level: 85 },
+        { name: 'SCSS', level: 87 },
       ]
     }, {
       skillCategory: 'Back End',
       skills: [
-        { name: 'Java', level: 77 },
+        { name: 'Java', level: 90 },
         { name: 'Spring Boot', level: 82 },
-        { name: 'Node.js', level: 85 },
-        { name: 'C#', level: 91 },
-        { name: 'Socket.IO', level: 91 },
-        { name: 'Apache Camel', level: 91 },
-        { name: 'SSIS', level: 91 }
+        { name: 'Node.js', level: 50 },
+        { name: 'Socket.IO', level: 70 },
+        { name: 'Apache Camel', level: 45 },
+        { name: 'SSIS', level: 30 }
       ]
     }, {
       skillCategory: 'Cloud',
       skills: [
-        { name: 'Azure', level: 77 },
-        { name: 'AWS', level: 77 },
-        { name: 'Openshift', level: 82 },
+        { name: 'Azure', level: 45 },
+        { name: 'AWS', level: 30 },
+        { name: 'Openshift', level: 35 },
 
       ]
     }, {
       skillCategory: 'Database',
       skills: [
-        { name: 'SQL Server', level: 77 },
-        { name: 'Couchbase Server', level: 82 }
+        { name: 'SQL Server', level: 60 },
+        { name: 'Couchbase Server', level: 50 },
+        { name: 'Redis', level: 30 }
       ]
     }, {
       skillCategory: 'Others',
       skills: [
-        { name: 'Unity 3D', level: 77 },
-        { name: 'Socket.IO', level: 82 },
-        { name: 'Blender', level: 77 },
-        { name: 'SSMS', level: 82 }
+        { name: 'Unity 3D', level: 50 },
+        { name: 'Socket.IO', level: 65 },
+        { name: 'Active MQ', level: 40 },
+        { name: 'Blender', level: 35 },
+        { name: 'SSMS', level: 30 }
       ]
     }]
   }

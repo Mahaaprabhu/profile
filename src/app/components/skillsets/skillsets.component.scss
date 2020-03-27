@@ -1,10 +1,11 @@
 .skillsets {
     display: grid;
-    max-width: 100rem;
+    max-width: 90vw;
     margin: auto;
     margin-bottom: 20rem;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-top: 2vw;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: .3rem;
-    padding: 1rem;
-    background-image: linear-gradient(45deg, #023f5d, #848585);
+    padding: 1rem 2rem;
+    background-image: linear-gradient(45deg, #7f898e, #52585a);
 }

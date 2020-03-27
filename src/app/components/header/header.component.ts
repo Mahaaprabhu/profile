@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DateUtilService } from 'src/app/services/date-util.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  greetingWithContext:string = 'Good Morning';
+
+  constructor(private dateUtilService: DateUtilService) {
+    this.greetingWithContext = this.dateUtilService.getGreetingWithContext();
+  }
 
   ngOnInit(): void {
   }

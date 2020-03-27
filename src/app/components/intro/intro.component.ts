@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DateUtilService } from 'src/app/services/date-util.service';
 
 @Component({
   selector: 'app-intro',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
-  constructor() { }
+  expInYears: string;
+
+  constructor(private dateUtilService: DateUtilService) {
+    this.expInYears = this.dateUtilService.getProfessionalExperienceInYears();
+  }
 
   ngOnInit(): void {
   }
