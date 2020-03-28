@@ -7,7 +7,8 @@
 
 .header {
 
-    background-image: linear-gradient(180deg, #898889, transparent);
+    //background-image: linear-gradient(180deg, #898889, transparent);
+    background-image: linear-gradient(180deg, #5a848d, transparent);
     padding: 1rem 2rem;
 
     .profile-image {
@@ -19,7 +20,8 @@
         animation: shadow_10z_animation linear 2s;
 
         img {
-            background-image: linear-gradient(120deg, black, #cdedfb, black);
+            //background-image: linear-gradient(120deg, black, #cdedfb, black);
+            background-image: linear-gradient(120deg, #3e6a76, #92e6f7, #3b6570);
             width: 100%;
             padding: 1rem;
             border-radius: 100vw;
@@ -32,6 +34,8 @@
         text-align: center;
         margin-bottom: 2rem;
         text-shadow: 0px 0px 10px dimgrey;
+        color:black;
+
         transform-origin: right;
 
         &__greet {
@@ -44,7 +48,7 @@
             width: 100%;
             @supports (animation: type-mid 3s steps(40, end)) {
                 opacity: 0;
-                animation: type-mid 3s steps(40, end) 2s;
+                animation: type-mid 3s steps(40, end) 2s, color-blast 2s steps(30, end) 2.5s;
                 animation-fill-mode: forwards;
             }
         }
@@ -58,9 +62,9 @@
             white-space: nowrap;
             overflow: hidden;
             width: 100%;
-            @supports (animation: type-end 3s steps(40, end) 3.5s) {
+            @supports (animation: type-end 3s steps(30, end) 3.5s) {
                 opacity: 0;
-                animation: type-end 3s steps(40, end) 3.5s;
+                animation: type-end 3s steps(30, end) 3.5s, color-blast 2s steps(30, end) 4.5s;
                 animation-fill-mode: forwards;
             }
         }
@@ -154,14 +158,29 @@
 @keyframes type-mid {
     0% {width: 0.1rem;}
     1% {opacity: 1;}
-    100% {opacity: 1;}
+    100% {
+        opacity: 1;
+    }
 }
   
   
 @keyframes type-end {
-    0% {width: 0;}
+    0% {width: 0.1rem;}
     1% {opacity: 1;}
-    100% {opacity: 1;}
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes color-blast {
+    0% {
+
+    }
+    100% {
+        color: #c4f8ff;
+        text-shadow: -1px -1px 2px black;
+        background-image: linear-gradient(120deg,transparent,transparent, #3897a9,transparent, transparent);
+    }
 }
 
 @keyframes shadow_10z_animation {
