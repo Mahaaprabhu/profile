@@ -11,14 +11,20 @@
     background-image: linear-gradient(180deg, #5a848d, transparent);
     padding: 1rem 2rem;
 
+    @supports (animation: push-things-down-animation 9s) {
+        animation: push-things-down-animation 9s;
+        animation-fill-mode: forwards;
+    }
+
     .profile-image {
         width: 35vw;
         max-width: 25rem;
         height: 35vw;
         max-height: 25rem;
         margin: 1rem auto;
-        animation: shadow_10z_animation linear 2s;
-
+        @supports (animation: shadow-10z-animation 2s steps(40, end)) {
+            animation: shadow-10z-animation 2s;
+        }
         img {
             //background-image: linear-gradient(120deg, black, #cdedfb, black);
             background-image: linear-gradient(120deg, #3e6a76, #92e6f7, #3b6570);
@@ -29,15 +35,12 @@
     }
 
     &__texts {
-
         font-family: cursive;
         text-align: center;
         margin-bottom: 2rem;
         text-shadow: 0px 0px 10px dimgrey;
         color:black;
-
         transform-origin: right;
-
         &__greet {
             margin: auto;
             font-weight: 500;
@@ -48,11 +51,10 @@
             width: 100%;
             @supports (animation: type-mid 3s steps(40, end)) {
                 opacity: 0;
-                animation: type-mid 3s steps(40, end) 2s, color-blast 2s steps(30, end) 2.5s;
+                animation: type-mid 3s steps(40, end) 1.5s, color-blast 2s steps(30, end) 2s;
                 animation-fill-mode: forwards;
             }
         }
-
         &__intro {
             margin: auto;
             font-size: 1.6rem;
@@ -68,8 +70,41 @@
                 animation-fill-mode: forwards;
             }
         }
+   
+    }
+
+    .iconic-links {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 40rem;
+        margin: auto;
+
+        .iconic-link {
+                color: #2a707d;
+                background-color: transparent;
+                box-shadow: 1px 1px 10px #59848d;
+                width: 3rem;
+                height: 3rem;
+                padding: .8rem;
+                border-radius: 10rem;
+                display: inline-block;
+                text-align: center;
+                font-size: 1.5rem;
+                
+                &:active, &:hover {
+                    transform: scale(1.2);
+                    box-shadow: 1px 1px 5px #59848d;
+                }
+
+                @supports (animation: zoom-up 1.5s linear 6.5s) {
+                    opacity: 0;
+                    animation: zoom-up 1.5s linear 6.5s;
+                    animation-fill-mode: forwards;
+                }
+        }
         
     }
+
 
     @include responsiveness('mob-small') {
         .profile-image {
@@ -119,7 +154,16 @@
                 transform: skew(0, -3deg);
             }
         }
-        
+
+        .iconic-links {
+            .iconic-link {
+                font-size: 2rem;
+                width: 4rem;
+                height: 4rem;
+                padding: 1rem;
+            }
+        }
+
     }
 
 
@@ -149,8 +193,16 @@
             }
         }
 
+        .iconic-links {
+            .iconic-link {
+                font-size: 3rem;
+                width: 5rem;
+                height: 5rem;
+                padding: 1rem;
+            }
+        }
     }
-
+    
 }
 
 
@@ -183,21 +235,35 @@
     }
 }
 
-@keyframes shadow_10z_animation {
-    0% {width: 0rem; height: 0rem}
-    10% {width: 10rem; height: 10rem}
-    0% {width: 0rem; height: 0rem}
+@keyframes zoom-up {
+    0% {
+        opacity: 1;
+        padding: 0;
+        font-size: 10rem;
+        overflow: hidden;
+    }
+    90% {
+        opacity: 1;
+        padding: 0;
+        font-size: 5rem;
+    }
+    100% {
+        opacity: 1;
+        color: #2a707d;
+        background-color: transparent;
+        box-shadow: 1px 1px 10px #59848d;
+        overflow: hidden;
+    }
 }
 
-@keyframes shadow_10z_animation_bkp {
-    0% {box-shadow: 0px 0px 0px darkslategray; opacity: 0;text-shadow: 0px 0px 5px darkgrey;}
-    9% {box-shadow: 0px 0px 0px darkslategray; opacity: .2;text-shadow: 0px 0px 5px darkgrey;}
-    10% {box-shadow:  0px 0px 0px darkslategray; opacity: .3;text-shadow: 0px 0px 5px darkgrey;}
-    50% {
-        box-shadow:  1px 1px 5px darkslategray; 
-        opacity: .6;
-        text-shadow: 0px 0px 5px darkgrey;
-    }
-    70% {box-shadow:  1px 1px 12px darkslategray;text-shadow: 0px 0px 5px darkgrey;}
-    100% {box-shadow:  1px 1px 10px darkslategray;text-shadow: 0px 0px 5px darkgrey;}
+
+@keyframes push-things-down-animation {
+    0% {margin-bottom: 100vh;}
+    99% {margin-bottom: 100vh;}
+    100% {}
+}
+
+@keyframes shadow-10z-animation {
+    0% {width: 0; height: 0}
+    100% {}
 }
