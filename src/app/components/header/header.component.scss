@@ -1,4 +1,6 @@
 @import '../../styles/global-vars.style.scss';
+@import '../../styles/custom.style.scss';
+
 
 @mixin shadow-10z {
     box-shadow: 1px 1px 10px black;
@@ -264,4 +266,14 @@
 @keyframes shadow-10z-animation {
     0% {width: 0; height: 0}
     100% {}
+}
+
+#contact-pop-check:checked ~ #contact-pop {
+    visibility: visible;
+    opacity: 1;
+}
+
+#contact-pop-check:checked ~ .pop-on-check-backdrop {
+    visibility: visible;
+    opacity: 0.85;
 }
