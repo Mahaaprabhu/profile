@@ -8,6 +8,7 @@ import { MainComponent } from './components/main/main.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { SkillsetsComponent } from './components/skillsets/skillsets.component';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SkillsetsComponent } from './components/skillsets/skillsets.component';
     MainComponent,
     IntroComponent,
     SkillsComponent,
-    SkillsetsComponent
+    SkillsetsComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

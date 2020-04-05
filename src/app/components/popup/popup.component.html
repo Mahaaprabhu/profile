@@ -1,0 +1,15 @@
+<div id="contact-pop" class="pop-on-check" [ngClass]="{'pop-on-check-visible':displayPopup}">
+    <div class="btn-pop-closer" (click)="onClosePopup()">
+        X
+    </div>
+    <div class="pop-content" *ngIf="popupType == 'PHONE'">
+        <p>{{ popupData }}</p>
+    </div>
+    <div class="pop-content" *ngIf="popupType == 'EMAIL'">
+        <p>{{ popupData }}</p>
+    </div>
+    <div class="pop-content-copy">
+        <i class="fas fa-copy"></i>
+    </div>
+</div>
+<div class="pop-on-check-backdrop" [ngClass]="{'pop-on-check-backdrop-visible':displayPopup}"></div>
