@@ -1,15 +1,20 @@
-<div id="contact-pop" class="pop-on-check" [ngClass]="{'pop-on-check-visible':displayPopup}">
+<div id="contact-pop" class="popup" [ngClass]="{'popup-visible':displayPopup}">
     <div class="btn-pop-closer" (click)="onClosePopup()">
         X
     </div>
-    <div class="pop-content" *ngIf="popupType == 'PHONE'">
+    <div class="pop-content">
         <p>{{ popupData }}</p>
     </div>
-    <div class="pop-content" *ngIf="popupType == 'EMAIL'">
-        <p>{{ popupData }}</p>
-    </div>
-    <div class="pop-content-copy">
-        <i class="fas fa-copy"></i>
+    <div class="popup-icons-wraper">
+        <div class="popup-content-action" *ngIf="popupType == 'PHONE'">
+            <a [href]="'tel:'+popupData"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="popup-content-action" *ngIf="popupType == 'EMAIL'">
+            <a [href]="'mailto:'+popupData"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="popup-content-copy">
+            <i class="fas fa-copy"></i>
+        </div>
     </div>
 </div>
-<div class="pop-on-check-backdrop" [ngClass]="{'pop-on-check-backdrop-visible':displayPopup}"></div>
+<div class="popup-backdrop" [ngClass]="{'popup-backdrop-visible':displayPopup}"></div>
