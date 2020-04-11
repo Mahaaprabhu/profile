@@ -28,8 +28,7 @@ export class SkillsetsComponent implements OnInit {
         { name: 'Spring Boot', level: 82 },
         { name: 'Node.js', level: 50 },
         { name: 'Socket.IO', level: 70 },
-        { name: 'Apache Camel', level: 45 },
-        { name: 'SSIS', level: 30 }
+        { name: 'Apache Camel', level: 45 }
       ]
     }, {
       skillCategory: 'Cloud',
@@ -37,7 +36,6 @@ export class SkillsetsComponent implements OnInit {
         { name: 'Azure', level: 45 },
         { name: 'AWS', level: 30 },
         { name: 'Openshift', level: 35 },
-
       ]
     }, {
       skillCategory: 'Database',
@@ -50,9 +48,9 @@ export class SkillsetsComponent implements OnInit {
       skillCategory: 'Others',
       skills: [
         { name: 'Unity 3D', level: 50 },
-        { name: 'Socket.IO', level: 65 },
         { name: 'Active MQ', level: 40 },
         { name: 'Blender', level: 35 },
+        { name: 'SSIS', level: 30 },
         { name: 'SSMS', level: 30 }
       ]
     }]

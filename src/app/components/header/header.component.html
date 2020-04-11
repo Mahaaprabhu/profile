@@ -1,26 +1,31 @@
 <header class="header">
-    <div class="profile-image">
-        <img src="/profile/assets/images/MahaaprabhuCasMod.png" alt="Mahaaprabhu's Picture">
-    </div>
 
-    <div class="header__texts">
-        <p class="header__texts__greet">Hi There...! {{greetingWithContext}} :)</p>
-        <p  class="header__texts__intro">I'm Mahaaprabhu Elangoventhan</p>
-    </div>
-
-    <div class="iconic-links">
-        <a class="iconic-link" href="https://www.github.com/Mahaaprabhu" target="_blank"><i class="fab fa-github"></i></a>
-        <a class="iconic-link" href="https://www.linkedin.com/in/mahaaprabhu" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <div class="iconic-link" (click)="onDisplayEmailPopup()"><i class="fas fa-envelope"></i></div>
-        <div class="iconic-link" (click)="onDisplayPhonePopup()"><i class="fas fa-phone"></i></div> 
-    </div>
-
-    <app-popup *ngIf="displayEmailPopup" [displayPopup]="displayEmailPopup" 
-        [popupType]="'EMAIL'"
-        [popupData]="'mahaaprabhu@gmail.com'"></app-popup>
-
-    <app-popup *ngIf="displayPhonePopup" [displayPopup]="displayPhonePopup" 
-        [popupType]="'PHONE'"
-        [popupData]="'+91 8015239799'"></app-popup>
+    <div class="header-stuffs-wrapper">
+        <div class="profile-image">
+            <img src="/profile/assets/images/MahaaprabhuCasMod.png" alt="Mahaaprabhu's Picture">
+        </div>
+    
+        <div class="header__texts">
+            <p class="header__texts__greet">Hi There...! {{greetingWithContext}} :)</p>
+            <p  class="header__texts__intro">I'm Mahaaprabhu Elangoventhan</p>
+        </div>
+        
+        <div class="iconic-links">
+            <a class="iconic-link" href="https://www.github.com/Mahaaprabhu" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="iconic-link" href="https://www.linkedin.com/in/mahaaprabhu" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <div class="iconic-link" (click)="onDisplayEmailPopup()"><i class="fas fa-envelope"></i></div>
+            <div class="iconic-link" (click)="onDisplayPhonePopup()"><i class="fas fa-phone"></i></div> 
+        </div>
+    
+        <app-popup *ngIf="displayEmailPopup" [displayPopup]="displayEmailPopup" 
+            [popupType]="'EMAIL'"
+            [popupData]="'mahaaprabhu@gmail.com'">
+        </app-popup>
+    
+        <app-popup *ngIf="displayPhonePopup" [displayPopup]="displayPhonePopup" 
+            [popupType]="'PHONE'"
+            [popupData]="'+91 8015239799'">
+        </app-popup> 
+    </div>   
         
 </header>
