@@ -17,9 +17,14 @@
 
 .header-stuffs-wrapper {
     position: relative;
-    height: 50vw;
+    height: 55vw;
+    min-height: 20rem;
     max-width: 60rem;
     margin: auto;
+
+    @include responsiveness('mob-small') {
+        min-height: 15rem;
+    }
 
     @include responsiveness('tab-port') {
         height: 35rem;
@@ -77,14 +82,15 @@
     text-shadow: 0 0 10px #ffffff;
     color: #000;
     transform-origin: right;
-    top: 60%;
-    left: 15%;
+    top: 50%;
     transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
 
     &__greet {
         margin: auto;
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         line-height: 1.5;
         white-space: nowrap;
         overflow: hidden;
@@ -97,7 +103,7 @@
     }
     &__intro {
         margin: auto;
-        font-size: 1.6rem;
+        font-size: 1.9rem;
         font-weight: 600;
         transform: skew(0, -3deg);
         line-height: 2;
@@ -114,12 +120,12 @@
     @include responsiveness('mob-small') {
         &__greet {
             font-weight: 400;
-            font-size: 1rem;
+            font-size: 1.2rem;
             line-height: 1.3;
         }
 
         &__intro {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             font-weight: 600;
             line-height: 1.5;
             transform: skew(0, -3deg);
@@ -128,17 +134,18 @@
 
     @include responsiveness('mob-land') {
         left: 20%;
+        transform: translateX(0);
 
         &__greet {
             font-weight: 450;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             line-height: 2;
         }
 
         &__intro {
             font-size: 2rem;
             font-weight: 550;
-            line-height: 2.2;
+            line-height: 2.6;
             transform: skew(0, -3deg);
         }
     }
@@ -163,25 +170,24 @@
 
 .iconic-links {
     position: absolute;
-    max-width: 40rem;
-    margin: auto;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
+    min-width: 24rem;
 
     .iconic-link {
-            margin: 0 .25rem;
+            margin: 0 1rem;
             color: #d6dcec;
-            background-image: linear-gradient(120deg, #3e6a76, #92e6f70f, #3b6570);
+            background-image: linear-gradient(120deg, #000000, #12839980, #000000);
             box-shadow: 1px 1px 5px #59b5dc;
             text-shadow: 1px 1px 2px black;
-            width: 3rem;
-            height: 3rem;
-            padding: 0.8rem;
+            width: 4rem;
+            height: 4rem;
+            padding: 1.2rem;
             border-radius: 10rem;
             display: inline-block;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             
             &:active, &:hover {
                 transform: scale(.8);
@@ -193,21 +199,21 @@
                 animation: zoom-up 1.5s linear 6.5s;
                 animation-fill-mode: forwards;
             }
-
-            @include responsiveness('mob-small') {
-                margin: 0 0;
-            }
-
-            @include responsiveness('mob-land') {
-                margin: 0 .5rem;
-            }
-
-            @include responsiveness('tab-port') {
-                margin: 0 1rem;
-            }
     }
 
+    @include responsiveness('mob-small') {
+        min-width: 20rem;
+        .iconic-link {
+            font-size: 1.4rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            padding: 1.1rem;
+            margin: 0 .75rem;
+        }
+    }
+    
     @include responsiveness('mob-land') {
+        min-width: 24rem;
         .iconic-link {
             font-size: 2rem;
             width: 4rem;
@@ -251,7 +257,7 @@
     100% {
         color: #a9e6f8;
         text-shadow: -1px 0px 2px #000000;
-        background-image: linear-gradient(120deg, transparent, transparent, #2a5862, transparent, transparent);
+        background-image: linear-gradient(120deg, transparent, transparent, #023d59, transparent, transparent);
     }
 }
 
