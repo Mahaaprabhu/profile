@@ -1,6 +1,7 @@
 $text-shadow-primary: 1px 1px 5px black;
 $text-shadow-secondary: 0px 0px 20px dimgrey;
-
+$assets-path-prefix: "/profile";
+//$assets-path-prefix: "";
 
 @mixin responsiveness($display-type) {
     /*

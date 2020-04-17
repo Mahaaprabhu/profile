@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DateUtilService } from 'src/app/services/date-util.service';
 import { AppStateService } from 'src/app/app-state.service';
 import { Subscription } from 'rxjs';
+import { GlobalConfigService } from 'src/app/services/global-config.service';
 
 @Component({
   selector: 'app-header',
@@ -15,10 +16,15 @@ export class HeaderComponent implements OnInit {
   displayPhonePopupSubscription$: Subscription;
   displayEmailPopup: boolean = false;
   displayEmailPopupSubscription$: Subscription;
+  assetsPathPrefix: string = '';
 
-  constructor(private dateUtilService: DateUtilService, private appStateService: AppStateService) {
-    this.greetingWithContext = this.dateUtilService.getGreetingWithContext();
-    this.managePopupSubscriptions();
+  constructor(
+    private dateUtilService: DateUtilService, 
+    private appStateService: AppStateService,
+    private globalConfigService: GlobalConfigService) {
+      this.assetsPathPrefix = this.globalConfigService.getAssetsPathPrefix();
+      this.greetingWithContext = this.dateUtilService.getGreetingWithContext();
+      this.managePopupSubscriptions();
   }
 
   private managePopupSubscriptions(): void {

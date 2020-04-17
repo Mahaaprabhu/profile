@@ -1,6 +1,7 @@
 .skillsets {
     display: grid;
     max-width: 90vw;
+    border: .1rem solid #5697c5;
     margin: auto;
     margin-bottom: 20rem;
     margin-top: 2vw;
@@ -8,5 +9,6 @@
     grid-gap: .3rem;
     padding: 1rem 2rem;
     border-radius: 1rem;
-    background-image: linear-gradient(to right, #65d5f566, #2a67738a, #177f9985);
+    color: #6ea9c2;
+    background-image: linear-gradient(to right, #ffffff21, #607d8b82, #ffffff21);
 }

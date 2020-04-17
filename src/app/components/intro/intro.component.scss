@@ -1,18 +1,19 @@
 @import '../../styles/global-vars.style.scss';
 
 .intro-wrapper {
-    background-image: linear-gradient(120deg, #52b6d400, #468492, #1a7ba100);
+    background-image: linear-gradient(120deg, #52b6d400, #10579054, #1a7ba100);
 }
 
 .intro {
+    box-shadow: 0.1rem 0.1rem 1rem black;
+    border: .1rem solid #487ea9;
     padding: 1vw 1vw 3vw 2vw;
     margin: 2vh auto 5rem;
     border-top-left-radius: 10%;
     border-bottom-right-radius: 10%;
     border-top-right-radius: 25%;
     border-bottom-left-radius: 25%;
-    border-top: 0.5vw solid #11b3d569;
-    border-bottom: 0.5vw solid #11b3d569;
+    background-color: #d0d8de17;
     word-spacing: 0.2rem;
     margin-left: 5%;
     margin-right: 5%;
