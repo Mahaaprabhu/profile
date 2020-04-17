@@ -18,10 +18,10 @@ body {
 }
 
 .starter-wrap {
-    background-image: url(/assets/images/under-ocean-awesome-1.jpg);
+    background-image: url(assets/images/under-ocean-awesome-1.jpg);
     @supports (background-blend-mode: overlay) {
         background-image: 
-            url(/assets/images/under-ocean-awesome-1.jpg),
+            url(assets/images/under-ocean-awesome-1.jpg),
             linear-gradient(to bottom, #1c4d5c, #33748a, #196a8c85, #2ba0afa3);
         background-blend-mode: overlay;
     }
