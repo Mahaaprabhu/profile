@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalConfigService {
 
-  private assetsPathPrefix = "\profile";
+  private assetsPathPrefix = "/profile";
   //private assetsPathPrefix = "";
 
   constructor() { }

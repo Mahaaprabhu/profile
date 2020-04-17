@@ -4,7 +4,7 @@
 .skill-set {
     min-height: 0;
     margin: .2rem auto;
-    background-image: linear-gradient(45deg, #000000bd, #194c5b75);
+    background-image: linear-gradient(45deg, rgba(56, 123, 174, 0.43), rgba(27, 109, 133, 0.46));
     box-shadow: 1px 1px 10px black;
     padding: 1rem 2rem 2rem 2rem;
     border-radius: .5rem;
@@ -34,11 +34,11 @@
         &__level {
             width: 40%;
             height: 1rem;
-            background-color: #000000;
-            border: 1px solid #226382;
+            background-color: #00000057;
+            border: 1px solid #73bbd0;
 
             .skillbar {
-                background-color: #607D8B;
+                background-color: #74bbdd;
                 height: 100%;
             }
         }

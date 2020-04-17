@@ -46,7 +46,7 @@
         animation: shadow-10z-animation 2s;
     }
     img {
-        background-image: linear-gradient(120deg, #000000, #62a7e000, #000000);
+        background-image: linear-gradient(120deg,#0d5684,rgba(189, 229, 255, 0.41),#014c88d6);
         width: 100%;
         padding: 1rem;
         border-radius: 100vw;
@@ -175,7 +175,7 @@
     .iconic-link {
             margin: 0 1rem;
             color: #d5dbe0;
-            background-image: linear-gradient(120deg, #000000, transparent, #000000);
+            background-image: linear-gradient(120deg,#81c5ffa6,#085c9142,#4084af);
             box-shadow: 1px 1px 5px #000000;
             text-shadow: 1px 1px 2px black;
             width: 4rem;
@@ -255,7 +255,7 @@
     100% {
         color: #eef5fbe3;
         text-shadow: -1px 0px 2px #000000;
-        background-image: linear-gradient(120deg, transparent, transparent, #000000ab, transparent, transparent);
+        background-image: linear-gradient(120deg,transparent,transparent,rgba(97, 153, 193, 0.92),transparent,transparent);
     }
 }
 
