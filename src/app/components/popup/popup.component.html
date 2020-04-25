@@ -3,7 +3,9 @@
         X
     </div>
     <div class="pop-content">
-        <p>{{ popupData }}</p>
+        <p [ngClass]="{
+            'special-color': displaySpecialColor
+        }">{{ popupData }}</p>
     </div>
     <div class="popup-icons-wraper">
         <div class="popup-content-action" *ngIf="popupType == 'PHONE'">
@@ -12,8 +14,12 @@
         <div class="popup-content-action" *ngIf="popupType == 'EMAIL'">
             <a [href]="'mailto:'+popupData"><i class="fas fa-envelope"></i></a>
         </div>
-        <div class="popup-content-copy">
-            <i class="fas fa-copy"></i>
+        <div class="popup-content-copy" (click)="onContentCopy()">
+            <i class="fas fa-copy"
+            [ngClass]="{
+                'special-color': displaySpecialColor
+            }"></i>
+            <i *ngIf="displayTooltip" class="tooltip">{{ tooltip }}</i>
         </div>
     </div>
 </div>
