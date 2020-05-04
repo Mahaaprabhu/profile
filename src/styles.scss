@@ -17,7 +17,21 @@ body {
     
 }
 
-.starter-wrap {
+#bgVideo {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -20;
+    transform: translate(-50%, -50%);
+    @include responsiveness('laptop') {
+        height: auto;
+    }
+}
+
+.starter-wrap-bkp {
     background-image: url(assets/images/under-ocean-awesome-1.jpg);
     @supports (background-blend-mode: overlay) {
         background-image: 

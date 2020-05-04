@@ -71,7 +71,6 @@ export class PopupComponent implements OnInit {
     dynamicElement.style.width = '0';
     dynamicElement.style.opacity = '0';
     document.body.appendChild(dynamicElement);
-    dynamicElement.focus();
     dynamicElement.select();
     document.execCommand('copy');
     document.body.removeChild(dynamicElement);
