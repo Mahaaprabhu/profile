@@ -20,6 +20,8 @@ export class SkillsetsComponent implements OnInit {
         { name: 'HTML5', level: 91 },
         { name: 'CSS3', level: 85 },
         { name: 'SCSS', level: 87 },
+        { name: 'Bootstrap', level: 30 },
+        { name: 'jQuery', level: 28 },
       ]
     }, {
       skillCategory: 'Back End',
@@ -27,7 +29,10 @@ export class SkillsetsComponent implements OnInit {
         { name: 'Java', level: 90 },
         { name: 'Spring Boot', level: 82 },
         { name: 'Node.js', level: 50 },
+        { name: 'C, C++, C#', level: 50 },
         { name: 'Socket.IO', level: 70 },
+        { name: 'Active MQ', level: 40 },
+        { name: 'SSIS', level: 30 },
         { name: 'Apache Camel', level: 45 }
       ]
     }, {
@@ -42,15 +47,14 @@ export class SkillsetsComponent implements OnInit {
       skills: [
         { name: 'SQL Server', level: 60 },
         { name: 'Couchbase Server', level: 50 },
+        { name: 'Oracle', level: 30 },
         { name: 'Redis', level: 30 }
       ]
     }, {
       skillCategory: 'Others',
       skills: [
         { name: 'Unity 3D', level: 50 },
-        { name: 'Active MQ', level: 40 },
         { name: 'Blender', level: 35 },
-        { name: 'SSIS', level: 30 },
         { name: 'SSMS', level: 30 }
       ]
     }]

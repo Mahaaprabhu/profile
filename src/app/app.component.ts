@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'profile';
+  constructor() {
+    const bgVideo: HTMLVideoElement =  document.getElementById("bgVideo") as HTMLVideoElement;
+    bgVideo.playbackRate = .5;
+  }
 }
